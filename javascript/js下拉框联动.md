@@ -35,11 +35,9 @@ js    代码
 	  var  hashname=[];
  	  for(var i in bb) {
    		hashname.push(bb[i].ChannelName);
-		}
-		 //遍历生产option选项
-     	  	 for (var n = 0; n < hashname.length; n++) {
-　    　	       //创建一个option 把数据存储在option中    	        	
-		 var op = new Option(hashname[n],n);           
+		}		
+     	  	 for (var n = 0; n < hashname.length; n++) { //遍历生产option选项 	        	
+		 var op = new Option(hashname[n],n);//创建一个option 把数据存储在option中              
             	 for(var i in bb) {
    		 if(hashname[n]==bb[i].ChannelName){
    		 op.value=bb[i].Channel;
@@ -67,16 +65,14 @@ js    代码
    		faultchannel.push(aa[i].Target);
    	}
 	}	
-	//console.log(faultchannel);去重
-	var   hash=[];
+	var   hash=[];//console.log(faultchannel);去重
 	faultchannel.sort();
 	for(var i=0;i<faultchannel.length;i++){
 	if(faultchannel[i]!==hash[hash.length-1]){
 	hash.push(faultchannel[i]);
 	}
 	}
- 	 //console.log(hash);
- 	 var  hashname=[];
+ 	 var  hashname=[];	//console.log(hash);
  	 hashname.push("请选择");
  	 for(var n=0;n<hash.length;n++){
  	 for(var i in bb) {
@@ -88,8 +84,7 @@ js    代码
 	}	
  	var two = document.getElementById('targerchannel');
  	two.length=0; 
-　　　   //遍历生产option选项
-        for (var n = 0; n < hashname.length; n++) {
+        for (var n = 0; n < hashname.length; n++) { //遍历生产option选项
      	    var op = new Option(hashname[n],n); //创建一个option 把数据存储在option
             for(var i in bb) {
    			if(hashname[n]==bb[i].ChannelName){
