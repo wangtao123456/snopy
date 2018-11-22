@@ -23,38 +23,37 @@ html  代码
 js    代码
 
 
-
 //初始化传入的后台数据，在点击进入页面的时候，装载在第一个下拉框中	
-window.onload =function()
-{
-   document.getElementById("faultchannel").length=0;
-   var two = document.getElementById('faultchannel');
-   var list=${channelList};
-   var bb = eval(${channelList});
-   var  hashname=[];
-   for(var i in bb) {
-   	hashname.push(bb[i].ChannelName);
-	}
-	//遍历生产option选项
-        for (var n = 0; n < hashname.length; n++) {
-　　　　//创建一个option 把数据存储在option 
-            var op = new Option(hashname[n],n);           
-            for(var i in bb) {
+
+	window.onload =function()
+	{
+ 	  document.getElementById("faultchannel").length=0;
+ 	  var two = document.getElementById('faultchannel');
+  	 var list=${channelList};
+  	 var bb = eval(${channelList});
+	   var  hashname=[];
+ 	  for(var i in bb) {
+   		hashname.push(bb[i].ChannelName);
+		}
+		//遍历生产option选项
+     	  	 for (var n = 0; n < hashname.length; n++) {
+　　　	    　//创建一个option 把数据存储在option 
+    	        var op = new Option(hashname[n],n);           
+            	for(var i in bb) {
    			if(hashname[n]==bb[i].ChannelName){
    			op.value=bb[i].Channel;
    			two.add(op);
    		}
 		}		
-        };
+        	};
    
-}
-
+	}
 
 
 //将后台数据，去重，一一对应存入下一个联动的下拉框option组中
-function check1(option)
-{
 
+	function check1(option)
+	{
 	var  list=${channelList};
 	var  bb = eval(${channelList});
 	document.getElementById("targerchannel").length=0;
@@ -89,7 +88,7 @@ function check1(option)
 	}	
  	var two = document.getElementById('targerchannel');
  	two.length=0; 
-　　　//遍历生产option选项
+　　　  //遍历生产option选项
         for (var n = 0; n < hashname.length; n++) {
 
 　　　　//创建一个option 把数据存储在option 
@@ -107,9 +106,8 @@ function check1(option)
                 
 		
 		
-		
-function check3(option)
-{	
+    	function check3(option)
+	{	
 	document.getElementById("type").length=0;
 	var two = document.getElementById('faultchannel').value;
 	var flag=new Array();
@@ -143,7 +141,7 @@ function check3(option)
  	 // console.log(hashname);
  	 
  	var type = document.getElementById('type');
-　　　//遍历生产option选项
+　　　	//遍历生产option选项
         for (var i = 0; i < hashname.length; i++) {
 
 　　　　//创建一个option 把数据存储在option 
