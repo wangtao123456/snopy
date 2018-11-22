@@ -23,8 +23,7 @@ html  代码
 js    代码
 
 
-//初始化传入的后台数据，在点击进入页面的时候，装载在第一个下拉框中	
-
+	//初始化传入的后台数据，在点击进入页面的时候，装载在第一个下拉框中	
 	window.onload =function()
 	{
  	  document.getElementById("faultchannel").length=0;
