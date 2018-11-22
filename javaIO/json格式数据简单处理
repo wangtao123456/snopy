@@ -1,0 +1,19 @@
+
+
+
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+
+
+JSONObject jObject=new JSONObject();
+				jObject.put("Source", RS.getString(1).trim());
+				jObject.put("Target", RS.getString(2).trim());
+				jObject.put("Flag", RS.getString(3).trim());
+				jObject.put("Updsql", RS.getString(4));
+				jObject.put("Querysql", RS.getString(5));
+				jObject.put("Desc", RS.getString(6));
+				jObject.put("Res", RS.getString(7));
+				list.add(jObject);//将封装的记录，存入list中		
+			 fromObject = JSONArray.fromObject(list);
