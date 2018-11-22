@@ -28,26 +28,24 @@ js    代码
 	{
  	  document.getElementById("faultchannel").length=0;
  	  var two = document.getElementById('faultchannel');
-  	 var list=${channelList};
-  	 var bb = eval(${channelList});
-	   var  hashname=[];
+  	  var list=${channelList};
+  	  var bb = eval(${channelList});
+	  var  hashname=[];
  	  for(var i in bb) {
    		hashname.push(bb[i].ChannelName);
 		}
 		//遍历生产option选项
      	  	 for (var n = 0; n < hashname.length; n++) {
-　　　	    　//创建一个option 把数据存储在option    	        	
-		var op = new Option(hashname[n],n);           
-            	for(var i in bb) {
-   		if(hashname[n]==bb[i].ChannelName){
-   		op.value=bb[i].Channel;
-   		two.add(op);
-   		}
-		}		
-        	};
-   
+　    　	      //创建一个option 把数据存储在option中    	        	
+		 var op = new Option(hashname[n],n);           
+            	 for(var i in bb) {
+   		 if(hashname[n]==bb[i].ChannelName){
+   		 op.value=bb[i].Channel;
+   		 two.add(op);
+   		 }
+	         }		
+        	 };
 		}
-
 
 
 //将后台数据，去重，一一对应存入下一个联动的下拉框option组中
