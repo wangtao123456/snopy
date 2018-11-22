@@ -37,9 +37,9 @@ js    代码
 		}
 		//遍历生产option选项
      	  	 for (var n = 0; n < hashname.length; n++) {
-　　　	    　//创建一个option 把数据存储在option 
-    	        var op = new Option(hashname[n],n);           
-            	for(var i in bb) {
+　　　	    　 //创建一个option 把数据存储在option 
+    	         var op = new Option(hashname[n],n);           
+            	 for(var i in bb) {
    			if(hashname[n]==bb[i].ChannelName){
    			op.value=bb[i].Channel;
    			two.add(op);
@@ -48,6 +48,7 @@ js    代码
         	};
    
 	}
+
 
 
 //将后台数据，去重，一一对应存入下一个联动的下拉框option组中
