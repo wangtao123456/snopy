@@ -24,6 +24,8 @@ js    代码
 
 
 //初始化传入的后台数据，在点击进入页面的时候，装载在第一个下拉框中	
+	
+	
 	window.onload =function()
 	{
  	  document.getElementById("faultchannel").length=0;
@@ -49,6 +51,7 @@ js    代码
 		 
 		 
 //将后台数据，去重，一一对应存入下一个联动的下拉框option组中
+	
 	function check1(option)
 	{
 	var  list=${channelList};
