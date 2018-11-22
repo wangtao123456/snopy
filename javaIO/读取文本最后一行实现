@@ -1,3 +1,7 @@
+
+传入参数是file对象，和字符集该板块，utf-8等
+--------------
+
 //读取文本的最后一行
 	public static String readLastLine(File file, String charset) throws IOException {
 	    if (!file.exists() || file.isDirectory() || !file.canRead()) {
