@@ -95,7 +95,8 @@ js    代码
         };
 	}
 
-                
+
+//最后一个下拉框填充
 		
 		
  	function check3(option)
@@ -144,7 +145,6 @@ js    代码
 		}
 		else{
 		}
-　　　　	  //把带有数据的option 添加到第二个select
-            type.add(op);
+            type.add(op);//把带有数据的option 添加到第二个select
         };
 	}		
