@@ -48,8 +48,7 @@ js    代码
 		}
 
 
-//将后台数据，去重，一一对应存入下一个联动的下拉框option组中
-
+	//将后台数据，去重，一一对应存入下一个联动的下拉框option组中
 	function check1(option)
 	{
 	var  list=${channelList};
@@ -87,10 +86,8 @@ js    代码
  	var two = document.getElementById('targerchannel');
  	two.length=0; 
 　　　  //遍历生产option选项
-     
         for (var n = 0; n < hashname.length; n++) {
-　　　　//创建一个option 把数据存储在option 
-     
+　　　　//创建一个option 把数据存储在option
      	    var op = new Option(hashname[n],n);
             for(var i in bb) {
    			if(hashname[n]==bb[i].ChannelName){
@@ -118,10 +115,8 @@ js    代码
    		//console.log(aa[i].Flag);
    		flag.push(aa[i].Flag);  		
    	}
-	}	
-	
- 	 //console.log(hash);
- 	 
+	}
+ 	//console.log(hash);
  	var  hashname=[];
  	hashname.push("请选择");
  	for(var i=0;i<flag.length;i++){
@@ -136,13 +131,11 @@ js    代码
 	}else{
 	}
 	}
- 	 // console.log(hashname);
- 	 
+ 	 // console.log(hashname);	 
  	var type = document.getElementById('type');
-　　　	//遍历生产option选项
+　　　   //遍历生产option选项
         for (var i = 0; i < hashname.length; i++) {
-
-　　　　	//创建一个option 把数据存储在option 
+　　　　 //创建一个option 把数据存储在option 
             var op = new Option(hashname[i],i);			
 		if(hashname[i]=="联通"){
 		op.value="1";
@@ -155,7 +148,8 @@ js    代码
 		}else if(hashname[i]=="请选择"){
 		op.value="0";
 		}
-		else{			}
+		else{
+		}
 　　　　	//把带有数据的option 添加到第二个select
             type.add(op);
         };
