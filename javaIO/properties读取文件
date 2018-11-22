@@ -1,0 +1,24 @@
+package test;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.Properties;
+
+/***
+ * 非常简单的读取项目中的额配置文件 比较原始的方法
+ * 
+ * @author wangtao
+ *
+ */
+public class Readfile {
+	public static void main(String[] args) throws Exception {
+		read();
+	}
+
+	private static void read() throws Exception {
+		Properties p = new Properties();
+		p.load(new InputStreamReader(new FileInputStream(new File("src/db.properties"))));
+		System.out.println(p.getProperty("db_ip"));
+	}
+}
