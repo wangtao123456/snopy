@@ -144,22 +144,21 @@ js    代码
 　　　	//遍历生产option选项
         for (var i = 0; i < hashname.length; i++) {
 
-　　　　//创建一个option 把数据存储在option 
+　　　　	//创建一个option 把数据存储在option 
             var op = new Option(hashname[i],i);			
-			if(hashname[i]=="联通"){
-			op.value="1";
-			}else if(hashname[i]=="移动"){
-			op.value="2";
-			}else if(hashname[i]=="电信"){
-			op.value="3";			
-			}else if(hashname[i]=="全部"){
-			op.value="4";			
-			}else if(hashname[i]=="请选择"){
-			op.value="0";
-			}
-			else{
-			}
-　　　　//把带有数据的option 添加到第二个select
+		if(hashname[i]=="联通"){
+		op.value="1";
+		}else if(hashname[i]=="移动"){
+		op.value="2";
+		}else if(hashname[i]=="电信"){
+		op.value="3";			
+		}else if(hashname[i]=="全部"){
+		op.value="4";			
+		}else if(hashname[i]=="请选择"){
+		op.value="0";
+		}
+		else{			}
+　　　　	//把带有数据的option 添加到第二个select
             type.add(op);
         };
-}		
+	}		
